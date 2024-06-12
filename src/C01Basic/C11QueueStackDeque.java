@@ -165,7 +165,45 @@ public class C11QueueStackDeque {
 //            answer[i] = st3.pop();
 //        }
 //
-//        System.out.println(Arrays.toString(answer));
+//        System.out.println(Arrays.toString(answer);
+
+//        올바른 괄호
+        String s = "()()";
+        Stack<Character> st4 = new Stack<>();
+        boolean answer = true;
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                st4.push(c);
+            } else {
+                if (st4.isEmpty()) {
+                    answer = false;
+                    break;
+                }
+                st4.pop();
+            }
+        }
+        if (!st4.isEmpty()) {
+            answer = false;
+        }
+        System.out.println(answer);
+
+
+//         Deque
+        Deque <Integer> dq = new ArrayDeque<>();
+        dq.addFirst(10);
+        dq.addFirst(20);
+        dq.addFirst(30);
+        dq.addLast(40);
+        dq.addLast(50);
+        System.out.println(dq);
+        System.out.println(dq.pollFirst());
+        System.out.println(dq.pollLast());
+        System.out.println(dq.peekFirst());
+        System.out.println(dq.peekLast());
+        System.out.println(dq);
+
+//        다리를 지나는 트럭 풀어보기 (deque로)
+
 
     }
 }
