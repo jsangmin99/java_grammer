@@ -1,29 +1,23 @@
 package C01Basic;
+
+
 import java.util.Scanner;
 
-import static java.util.Arrays.sort;
-
-public class Main{
+public class Main {
     public static void main(String[] args) {
+        // 1로만들기2
         Scanner sc = new Scanner(System.in);
-
-        // 백준 보물
         int n = sc.nextInt();
-        int[] a = new int[n];
-        int[] b = new int[n];
-        int sum = 0;
-        for(int i = 0; i < n; i++){
-            a[i] = sc.nextInt();
+        int[] dp = new int[n + 1];
+        dp[1] = 0;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + 1;
+            if (i % 2 == 0) dp[i] = Math.min(dp[i], dp[i / 2] + 1);
+            if (i % 3 == 0) dp[i] = Math.min(dp[i], dp[i / 3] + 1);
         }
-        for(int i = 0; i < n; i++){
-            b[i] = sc.nextInt();
-        }
-        sort(a);
-        sort(b);
-        for(int i = 0; i < n; i++){
-            sum += a[i] * b[n - i - 1];
-        }
+        System.out.println(dp[n]);
 
-        System.out.println(sum);
+
     }
 }
+
