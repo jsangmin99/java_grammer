@@ -1,0 +1,27 @@
+[
+
+  {
+  "id": 1,
+  "name": "John Doe",
+  "classNumber": "1",
+  "city": "New York"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "classNumber": "2",
+    "city": "Los Angeles"
+  },
+  {
+    "id": 3,
+    "name": "Jim Doe",
+    "classNumber": "3",
+    "city": "Chicago"
+  },
+  {
+    "id": 4,
+    "name": "Jill Doe",
+    "classNumber": "4",
+    "city": "Houston"
+  }
+]
